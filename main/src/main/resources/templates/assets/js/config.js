@@ -1,18 +1,71 @@
-var boolean = true;
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  for (var i = 0; i < reveals.length; i++) {
+var elementVisible = 150;
+var booleanPortifolio = true;
+function revealPortifolio() {
+  var reveal = document.querySelectorAll(".revealPortifolio");
+  for (var i = 0; i < reveal.length; i++) {
     var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-    if (elementTop < windowHeight - elementVisible && boolean) {
-      boolean = false
-      reveals[i].classList.add("active");
-      new Typed('.reveal.active > span#typeJava', {
+    var elementTop = reveal[i].getBoundingClientRect().top;
+    if (elementTop < windowHeight - elementVisible && booleanPortifolio) {
+      booleanPortifolio = false
+      reveal[i].classList.add("active");
+      new Typed('.revealPortifolio.active > span#typeJavaPortifolio', {
         strings: ['<mark class = "text-expression">package </mark><mark class = "text-paths"></mark>br.com.site.portifolio;</br></br><mark class = "text-expression">public class</mark> Portifolio {</br></br>&emsp;&emsp;<mark class = "text-expression">public static void</mark> main(String[] <mark class = "text-calls">args</mark>) {</br>&emsp;&emsp;&emsp;&emsp;<mark class = "text-expression">if</mark> (args.<mark class = "text-enums">length </mark>== 0) {</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.<mark class = "text-enums">err</mark>.<mark class = "text-enums">println</mark>(<mark class = "text-variable">"Erro: número insuficiente de argumentos."</mark>);</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.<mark class = "text-enums">exit</mark>(1);</br>&emsp;&emsp;&emsp;&emsp;}</br></br>&emsp;&emsp;&emsp;&emsp;String <mark class = "text-calls">result</mark> = <mark class = "text-expression">new</mark> Curriculo().<mark class = "text-enums">build</mark>();</br>&emsp;&emsp;&emsp;&emsp;System.<mark class = "text-enums">out</mark>.<mark class = "text-enums">println</mark>(<mark class = "text-calls">result</mark>);</br>&emsp;&emsp;}</br>}'],
-        typeSpeed: 1,
+        typeSpeed: 12,
       });
     }
   }
-}window.addEventListener("scroll", reveal);
+}window.addEventListener("scroll", revealPortifolio);
 
+var booleanInformacoes = true;
+function revealInformacoes() {
+  var reveal = document.querySelectorAll(".revealInformacoes");
+  for (var i = 0; i < reveal.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveal[i].getBoundingClientRect().top;
+    if (elementTop < windowHeight - elementVisible && booleanInformacoes) {
+      booleanInformacoes = false
+      reveal[i].classList.add("active");
+      new Typed('.revealInformacoes.active > span#typeJavaInformacoes', {
+        strings: ['<mark class = "text-expression">package </mark><mark class = "text-paths"></mark>br.com.site.portifolio;</br></br><mark class = "text-annotation">@Entity</mark></br><mark class = "text-expression">public class</mark> Curriculo {</br>&emsp;<mark class = "text-expression">private </mark>String <mark class = "text-calls">nome</mark>;</br>&emsp;<mark class = "text-expression">private </mark>String <mark class = "text-calls">sobreNome</mark>;</br>&emsp;<mark class = "text-expression">private </mark>String <mark class = "text-calls">email</mark>;</br>&emsp;<mark class = "text-expression">private </mark>String <mark class = "text-calls">telefone</mark>; </br></br>&emsp;<mark class = "text-annotation">@OneToOne</mark></br>&emsp;<mark class = "text-expression">private</mark> Endereco <mark class = "text-calls">endereco</mark>;</br></br>&emsp;<mark class = "text-expression">public</mark> String <mark class = "text-enums">build</mark>(){</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">nome</mark> = <mark class = "text-variable">"Guilherme"</mark>;</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">sobreNome</mark> = <mark class = "text-variable">"Pires de Sotti Machado"</mark>;</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">email</mark> = <mark class = "text-variable">"Gpiresmachado@hotmail.com"</mark>; </br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">telefone</mark> = <mark class = "text-variable">"+055 (11) 98954-8234"</mark>; </br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">endereco</mark> = <mark class = "text-expression">new</mark> Endereco().<mark class = "text-enums">build</mark>();</br>&emsp;&emsp;<mark class = "text-expression">return </mark><mark class = "text-enums">toString</mark>();</br>&emsp;}</br></br>&emsp;<mark class = "text-annotation">@Override</mark></br>&emsp;<mark class = "text-expression">public</mark> String <mark class = "text-enums">toString</mark>() {</br>   </br>&emsp;<mark class = "text-expression">return </mark><mark class = "text-variable">"Curriculum Vitae de "</mark> + <mark class = "text-calls">nome</mark> + <mark class = "text-variable">" "</mark> + <mark class = "text-calls">sobreNome</mark> + <mark class = "text-variable">" "</mark> +</br>&emsp;&emsp;&emsp;&emsp;<mark class = "text-variable">"Email: "</mark> + <mark class = "text-calls">email</mark> + <mark class = "text-variable">" "</mark> +</br>&emsp;&emsp;&emsp;&emsp;<mark class = "text-variable">"Telefone: "</mark> + <mark class = "text-calls">telefone</mark> + <mark class = "text-variable">" "</mark> + </br>&emsp;&emsp;&emsp;&emsp;<mark class = "text-variable">"Endereço: "</mark> + <mark class = "text-calls">endereco</mark>.<mark class = "text-enums">toString</mark>();</br>&emsp;}</br></br><mark class = "text-annotation">@Entity</mark></br><mark class = "text-expression">public class</mark> Endereco {</br>      </br>&emsp;<mark class = "text-expression">private</mark> String <mark class = "text-calls">cep</mark>;</br>&emsp;<mark class = "text-expression">private</mark> String <mark class = "text-calls">cidade</mark>;</br>&emsp;<mark class = "text-expression">private</mark> String <mark class = "text-calls">bairro</mark>;</br> </br>&emsp;<mark class = "text-expression">private </mark><mark class = "text-expression">boolean </mark><mark class = "text-calls">principal</mark>;</br></br>&emsp;<mark class = "text-annotation">@OneToOne</mark></br>&emsp;<mark class = "text-expression">private</mark> Pessoa <mark class = "text-calls">pessoa</mark>;</br></br>&emsp;<mark class = "text-expression">protected </mark><mark class = "text-enums">build</mark>(){</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">cep</mark> = <mark class = "text-variable">"03883-010"</mark>;		</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">cidade</mark> = <mark class = "text-variable">"São Paulo/SP"</mark>;</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">bairro</mark> = <mark class = "text-variable">"Av.São Miguel - Jardim Cotinha"</mark>;</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">principal</mark> = <em><mark class = "text-expression">true</mark></em>;</br>&emsp;}</br></br>&emsp;<mark class = "text-annotation">@Override</mark></br>&emsp;<mark class = "text-expression">public</mark> String <mark class = "text-enums">toString</mark>() {</br>&emsp;&emsp;<mark class = "text-expression">return </mark><mark class = "text-variable">"CEP: "</mark> + <mark class = "text-calls">cep</mark> + <mark class = "text-variable">" "</mark> +</br>&emsp;&emsp;&emsp;&emsp;&emsp;<mark class = "text-variable">"Cidade: "</mark> + <mark class = "text-calls">cidade</mark> + <mark class = "text-variable">" "</mark> +</br>&emsp;&emsp;&emsp;&emsp;&emsp;<mark class = "text-variable">"Bairro: "</mark> + <mark class = "text-calls">bairro</mark> + <mark class = "text-variable">" "</mark>;</br>&emsp;}</br></br>}'],
+      });
+    }
+  }
+}window.addEventListener("scroll", revealInformacoes);
+
+var booleanExperiencias = true;
+function revealExperiencias() {
+  var reveal = document.querySelectorAll(".revealExperiencias");
+  for (var i = 0; i < reveal.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveal[i].getBoundingClientRect().top;
+    if (elementTop < windowHeight - elementVisible && booleanExperiencias) {
+      booleanExperiencias = false
+      reveal[i].classList.add("active");
+      new Typed('.revealExperiencias.active > span#typeJavaExperiencias', {
+        strings: ['<mark class = "text-expression">package </mark><mark class = "text-paths"></mark>br.com.site.portifolio;</br></br><mark class = "text-expression">public enum</mark> ExperienciasProfissionais {</br></br>&emsp;<mark class = "text-methods">SAFE-PLACE</mark>(<mark class = "text-variable">"Analista e Desenvolvedor Java"</mark>,  <mark class = "text-variable">"01/2021 – 12/2021"</mark>),</br>&emsp;<mark class = "text-methods">SICOLOS</mark>(<mark class = "text-variable">"Desenvolvedor RPA"</mark>, <mark class = "text-variable">"07/2022 - 03/2023"</mark>);</br>      </br>&emsp;<mark class = "text-expression">private final</mark> String <mark class = "text-calls">cargo</mark>;</br>&emsp;<mark class = "text-expression">private final</mark> String <mark class = "text-calls">periodo</mark>;</br></br>&emsp;<mark class = "text-enums">ExperienciasProfissionais</mark>(String cargo, String periodo){</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">cargo</mark> = cargo;</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">periodo</mark> = periodo;</br>&emsp;}</br>}</br></br><mark class = "text-expression">public enum</mark> Habilidades {</br></br>&emsp;<mark class = "text-methods">MSPowerAutomate</mark>(<mark class = "text-enums">10</mark>,<mark class = "text-variable"> "Automações RPA com cloud e banco de dados"</mark>),</br>&emsp;<mark class = "text-methods">Scraping</mark>(<mark class = "text-enums">10</mark>, <mark class = "text-variable">"Data extracting de sites web e aplicações delphi"</mark>),</br>&emsp;<mark class = "text-methods">PacoteOffice</mark>(<mark class = "text-enums">10</mark>, <mark class = "text-variable">"Documentação e criação de funções e gráficos responsivos"</mark>),</br>&emsp;<mark class = "text-methods">Java</mark>(<mark class = "text-enums">7</mark>, <mark class = "text-variable">"Desenvolvemento de API\'s, Desing Pattern"</mark>),</br>&emsp; <mark class = "text-methods">Android</mark>(<mark class = "text-enums">7</mark>, <mark class = "text-variable">"Criação de layouts de aplicativos em java e back-ends da Api do GoogleCloud"</mark>),</br>&emsp;<mark class = "text-methods">SQL</mark>(<mark class = "text-enums">5</mark>, <mark class = "text-variable">"Desenvolvimento de tabelas, schemas, procedures, triggers, querys"</mark>),</br>&emsp;<mark class = "text-methods">Grandlew</mark>(<mark class = "text-enums">5</mark>, <mark class = "text-variable">"implementação de dependências e build de aplicativos"</mark>),</br>&emsp;<mark class = "text-methods">Flutter</mark>(<mark class = "text-enums">3</mark>, <mark class = "text-variable">"Front-End, orientação de Layers e life recycler"</mark>);</br>      </br>&emsp;<mark class = "text-expression">private final int </mark><mark class = "text-calls">nivel</mark>; <mark class = "text-comment">//Nivel: 1 até 10</mark></br>&emsp;<mark class = "text-expression">private final</mark> String <mark class = "text-calls">habilidade</mark>;</br></br>&emsp;<mark class = "text-enums">Habilidades</mark>(<mark class = "text-expression">int</mark> nivel, String habilidade) {</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">nivel</mark> = nivel;</br>&emsp;&emsp;<mark class = "text-expression">this</mark>.<mark class = "text-calls">habilidade</mark> = habilidade;</br>&emsp;}</br>}'],
+      });
+    }
+  }
+}window.addEventListener("scroll", revealExperiencias);
+
+var booleanFormacao = true;
+function revealFormacao() {
+  var reveal = document.querySelectorAll(".revealFormacao");
+  for (var i = 0; i < reveal.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveal[i].getBoundingClientRect().top;
+    if (elementTop < windowHeight - elementVisible && booleanFormacao) {
+      booleanFormacao = false
+      reveal[i].classList.add("active");
+      var typeFormacao = new Typed('.revealFormacao.active > span#typeSQLFormacao', {
+        strings: ['<mark class = "text-expression">SELECT </mark></br>&emsp;<mark class = "text-calls">p</mark>.formacao, </br>&emsp;<mark class = "text-calls">e</mark>.escola, <mark class = "text-calls">e</mark>.tempo, <mark class = "text-calls">e</mark>.descricao, </br>&emsp;<mark class = "text-enums">DATE_FORMAT</mark>(<mark class = "text-calls">e</mark>.inicio, <mark class = "text-variable">"%m/%Y"</mark>) <mark class = "text-expression">AS</mark> inicio, </br>&emsp;<mark class = "text-enums">DATE_FORMAT</mark>(<mark class = "text-calls">e</mark>.fim, <mark class = "text-variable">"%m/%Y"</mark>)    <mark class = "text-expression">AS</mark> fim, </br>&emsp;<mark class = "text-enums">GROUP_CONCAT</mark>(<mark class = "text-calls">hab</mark>.nome <mark class = "text-expression">SEPARATOR </mark><mark class = "text-variable">\', \'</mark>)&emsp;<mark class = "text-expression">AS</mark> habilidades </br><mark class = "text-expression">FROM </mark>&emsp;&emsp;&emsp;[<mark class = "text-methods">GPIRES_SOTTI</mark>].[<mark class = "text-methods">tbl_portifolio</mark>]&emsp;<mark class = "text-expression">AS </mark><mark class = "text-calls">p </mark></br><mark class = "text-expression">INNER JOIN</mark> [<mark class = "text-methods">GPIRES_SOTTI</mark>].[<mark class = "text-methods">tbl_estudo</mark>]       <mark class = "text-expression">AS </mark><mark class = "text-calls">e </mark>    <mark class = "text-expression">ON </mark><mark class = "text-calls">p</mark>.id_candidato = <mark class = "text-calls">e</mark>.id_candidato </br><mark class = "text-expression">INNER JOIN</mark> [<mark class = "text-methods">GPIRES_SOTTI</mark>].[<mark class = "text-methods">tbl_habilidade</mark>] <mark class = "text-expression">AS </mark><mark class = "text-calls">hab </mark><mark class = "text-expression">ON </mark><mark class = "text-calls">e</mark>.id_candidato = <mark class = "text-calls">hab</mark>.id_candidato </br><mark class = "text-expression">WHERE</mark></br>&emsp;&emsp; <mark class = "text-calls">p</mark>.idade &gt;= <mark class = "text-enums">18</mark></br><mark class = "text-expression">AND </mark><mark class = "text-calls">e</mark>.inicio &gt;= <mark class = "text-enums">ADDDATE</mark>(<mark class = "text-enums">CURRENT_DATE</mark>(), <mark class = "text-expression">INTERVAL </mark><mark class = "text-enums">-4 </mark><mark class = "text-expression">YEAR</mark>);</br><mark class = "text-expression">GROUP BY </mark></br>&emsp;<mark class = "text-calls">p</mark>.id_candidato  </br><mark class = "text-expression">HAVING </mark></br>&emsp;<mark class = "text-enums">COUNT</mark>(<mark class = "text-calls">hab</mark>.id) &gt;= <mark class = "text-enums">3</mark></br><mark class = "text-expression">ORDER BY </mark></br>&emsp;<mark class = "text-calls">e</mark>.inicio <mark class = "text-expression">DESC</mark>'],
+        onComplete: (self) => {
+          var output = document.querySelectorAll(".outputSQL");
+          for (var i = 0; i < reveal.length; i++) {
+            output[i].classList.add("active");
+          }
+        },
+      });
+    }
+  }
+}window.addEventListener("scroll", revealFormacao);

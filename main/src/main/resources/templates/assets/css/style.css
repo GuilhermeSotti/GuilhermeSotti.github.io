@@ -1034,6 +1034,15 @@ a:active{
 .min-heigth-portifolio{
     min-height: 360px;
 }
+.min-heigth-informacoes{
+    min-height: 1460px;
+}
+.min-heigth-experiencias{
+    min-height: 895px;
+}
+.min-heigth-formacao{
+    min-height: 460px;
+}
 .min-margin-top{
     margin-top: 40px !important;
 }
