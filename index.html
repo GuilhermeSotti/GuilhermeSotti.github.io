@@ -16,13 +16,13 @@
   <meta property="og:site_name" content="GuilhermeSotti">
   <meta property="og:image:alt" content="">
   <meta property="og:locale" content="pt_BR">
-  <link rel="shortcut icon" type="image/x-icon" href="main/src/main/resources/templates/assets/content/Logo.svg" sizes="16x16 24x24 32x32 48x48">
+  <link rel="shortcut icon" type="image/x-icon" href="main/src/content/Logo.svg" sizes="16x16 24x24 32x32 48x48">
   <title> GpiresSotti – Meu Portifólio Profissional </title>
-  <link rel="stylesheet" href="main/src/main/resources/templates/assets/css/navigation.css" type="text/css" media="all">
-  <link rel="stylesheet" href="main/src/main/resources/templates/assets/css/contact.css" type="text/css" media="all">
-  <link rel="stylesheet" href="main/src/main/resources/templates/assets/css/style.css" type="text/css" media="all">
-  <link rel="stylesheet" href="main/src/main/resources/templates/assets/css/fonte.css" type="text/css" media="all">
-  <script type="application/javascript" src="main/src/main/resources/templates/assets/js/config.js"></script>
+  <link rel="stylesheet" href="main/src/css/navigation.css" type="text/css" media="all">
+  <link rel="stylesheet" href="main/src/css/contact.css" type="text/css" media="all">
+  <link rel="stylesheet" href="main/src/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="main/src/css/fonte.css" type="text/css" media="all">
+  <script type="application/javascript" src="main/src/js/config.js"></script>
 
  </head>
  <body class="home blog logged-in no-customize-support embed-responsive customizer-styles-applied jetpack-reblog-enabled highlander-enabled highlander-light has-marketing-bar has-marketing-bar-theme-twenty-twenty-two-swiss">
@@ -82,7 +82,7 @@
         </nav>
         <div class="block-group has-background-background-color has-background has-medium-font-size is-content-justification-right is-layout-constrained container-6 block-group-is-layout-constrained" style="border-radius:5px;padding-top:var(---preset--spacing--20);padding-right:var(---preset--spacing--20);padding-bottom:var(---preset--spacing--20);padding-left:var(---preset--spacing--20)">
          <div class="block-file has-link-color elements-4562fc9be88774a5a62fba4cf5a165a1">
-          <a id="block-file--media-4a0c83f9-00d7-4bae-b572-68e875938b54" href="main/src/main/resources/templates/assets/content/Curriculo.pdf" target="_blank" rel="noreferrer noopener">
+          <a id="block-file--media-4a0c83f9-00d7-4bae-b572-68e875938b54" href="main/src/content/Curriculo.pdf" target="_blank" rel="noreferrer noopener">
            <strong>
             <em>Currículo</em>
            </strong>
@@ -104,10 +104,10 @@ PS C:\Users\GpiresSotti&gt; </mark> <mark class="text-methods">echo</mark> </str
 <mark class = "text-functions">class </mark><mark class = "text-enums">Build</mark>():
 <mark class = "text-functions">def </mark><mark class = "text-calls">init</mark>(self):
 	super(<mark class = "text-enums">Build</mark>, self).<mark class = "text-calls">__init__</mark>()
-	self.<mark class = "text-calls">title</mark>(<mark class = "text-variable">"GpiresSotti"</mark>)
+	self.<mark class = "text-calls">setTitle</mark>(<mark class = "text-variable">"GpiresSotti"</mark>)
 	<mark class = "text-functions">try</mark>:
 		browser = tkinterweb.<mark class = "text-enums">HtmlFrame</mark>(self)
-		browser.<mark class = "text-calls">load_website</mark>(gpiressotti.<mark class = "text-calls">link</mark>)
+		browser.<mark class = "text-calls">load_website</mark>("<a href="https://github.com/GuilhermeSotti" target="_blank" style = "text-decoration-color: #87ceeb;"><mark class = "text-variable">github.com/GuilhermeSotti</mark></a>" + gpiressotti.<mark class = "text-calls">portifolio</mark></mark>)
 		browser.<mark class = "text-calls">pack</mark>(fill = <mark class = "text-variable">"both"</mark>, expand = <em><mark class = "text-functions">True</mark></em>)
 	<mark class = "text-functions">except </mark><mark class = "text-enums">Exception</mark>:
 		sys.<mark class = "text-calls">exit</mark>()
